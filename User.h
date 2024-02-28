@@ -1,8 +1,7 @@
 /*
 * @author James Huston | jamzhuston@gmail.com
 * @date 03/02/2024
-* @detail:
-*
+* @brief class to manage user inputs and data
 */
 
 
@@ -21,47 +20,56 @@
 class User {
  public:
   /**
+  * @brief default constructor for user
   * 
-  *
   */
   User();
 
-
   /**
-  *
-  *
+  * @brief constructor for user
+  * @param name the name of the user
+  * @param symbol the symbol that the user is using
   */
   User(std::string name, std::string symbol);
 
   /**
+  * @brief gets the choice of which box to select from the user
+  * @param boxes the list of boxes
+  * @detail allows the user to choose the box they would like
+  *  use, if the user inputs a box already selected, the user
+  *  will be asked to select another box.
+  * @return int the box that the user has chosen
+  * 
   *
-  *
+  * --> may rewrite this function
   */
-  int getChoice(int[]);
+  int getChoice(int[] boxes);
 
   /**
+  * @brief gets the name of the user
   *
-  *
-  *
+  * @return returns the name of the user
   */
   std::string getName();
 
   /**
+  * @brief gets the symbol that the user is using
   *
-  *
-  *
+  * @return returns the symbol of the user
   */
   std::string getSymbol();
 
 
  private:
-  int wins, loses, ties;
   std::string name;
+  std::string symbol;
 
   /**
-  *
-  *
-  *
+  * @brief gets user details
+  * @detail formats user information like this:
+  *         name:    user_name
+  *         symbol   user_symbol
+  * 
   */
   std::string toString();
 
