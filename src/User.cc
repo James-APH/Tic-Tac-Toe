@@ -8,9 +8,10 @@
 
 #include <iostream>
 #include <string>
+#include "User.h"
 
 User::User() {
-  this("", "");
+ // this("", "");
 }
 
 
@@ -20,8 +21,8 @@ User::User(std::string name, std::string symbol) {
 }
 
 
-int User::getChoice(int[] boxes) {
-  return 0;
+void User::getChoice(int boxes[]) {
+  std::cout << "0" << std::endl;
 }
 
 

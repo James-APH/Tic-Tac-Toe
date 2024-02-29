@@ -32,6 +32,8 @@ class User {
   */
   User(std::string name, std::string symbol);
 
+
+
   /**
   * @brief gets the choice of which box to select from the user
   * @param boxes the list of boxes
@@ -43,7 +45,8 @@ class User {
   *
   * --> may rewrite this function
   */
-  int getChoice(int[] boxes);
+  void getChoice(int boxes[]);
+
 
   /**
   * @brief gets the name of the user
