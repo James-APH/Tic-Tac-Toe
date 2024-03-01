@@ -2,18 +2,11 @@
 
 
 ## Purpose:
-- The purpose of this project is to teach me how to use make files.
+- The purpose of this project is to teach me how to use CMake, aswell as Catch2.
 
 ## Build Rules:
-- make test:
-    makes the tests
-
-- make all:
-    makes all of the files nessecary for this project
-
-- make clean:
-    removes the executables from the directory
-
+- make:
+    runs the make file
 
 ## Game Play:
 
