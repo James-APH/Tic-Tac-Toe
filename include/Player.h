@@ -5,8 +5,8 @@
  */
 
 
-#ifndef INCLUDED_USER_H
-#define INCLUDED_USER_H 
+#ifndef INCLUDED_PLAYER_H
+#define INCLUDED_PLAYER_H 
 
 #include <iostream>
 #include <string>
@@ -29,7 +29,7 @@ class Player {
   * @param name the name of the player 
   * @param symbol the symbol that the player is using
   */
-  player(std::string name, std::string symbol);
+  Player(std::string name, char symbol);
 
   /**
   * @brief gets the choice of which box to select from the user
@@ -52,11 +52,30 @@ class Player {
   * @brief gets the symbol that the player is using
   * @return returns the symbol of the player
   */
-  std::string getSymbol();
+  char getSymbol();
 
  private:
   std::string name;
-  std::string symbol;
+  char symbol;
+  int score;
+
+  /**
+   * @brief getter for player score
+   * @return score the score of the player
+   * wins  -->  +1
+   * loses -->  -1
+   */
+  int getScore();
+
+  /**
+   * @brief setter for player score
+   * @param s the score increment or
+   * score decrement that is added to
+   * the players score
+   * wins  --> +1
+   * loses --> -1
+   */
+  void setScore(int s);
 
   /**
   * @brief gets player details
@@ -85,7 +104,7 @@ class User : public Player{
   * @param name the name of the user
   * @param symbol the symbol that the user is using
   */
-  User(std::string name, std::string symbol);
+  User(std::string name, char symbol);
 
   /**
   * @brief gets the choice of which box to select from the user
@@ -115,7 +134,7 @@ class AI : public Player{
   * @brief constructor for the AI
   * @param symbol the symbol that the player is using
   */
-  AI(std::string symbol);
+  AI(char symbol);
 
   /**
   * @brief gets the choice of which box to select from the user
