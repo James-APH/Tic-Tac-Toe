@@ -30,12 +30,5 @@ add_executable(${PROJECT_NAME} main.cc ${SRC_FILES})
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include )
 
 
-
-# Adding catch 2:
-find_package(Catch2 3 REQUIRED)
-
-# These tests can use the Catch2-provided main
-# add_executable(tests test.cpp)
-# target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
-
+add_subdirectory(test)
 
