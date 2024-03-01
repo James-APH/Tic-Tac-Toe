@@ -1,44 +1,85 @@
 /*
 * @author James Huston | jamzhuston@gmail.com
-* @date 28/02/2024
-* @brief class to manage user inputs and data
+* @date 29/02/2024
+* @brief definitions for Player.h
 */
-
 
 
 #include <iostream>
 #include <string>
-#include "User.h"
+#include "Player.h"
+
+Player::Player() {
+
+}
+
+
+Player::Player(std::string name, char symbol) {
+
+}
+
+
+int Player::getChoice(int boxes[]) {
+  return 0;
+}
+
+
+std::string Player::getName() {
+  return "";
+}
+
+
+char Player::getSymbol() {
+  return '';
+}
+
+
+int Player::getScore() {
+  return 0;
+}
+
+
+Player::setScore(int s) {
+
+}
+
+
+std::string Player::toString() {
+  return "";
+}
+
+
+
+
 
 User::User() {
- // this("", "");
+
 }
 
 
-User::User(std::string name, std::string symbol) {
-  this->name = name;
-  this->symbol = symbol;
+User::User(std::string name, char symbol) {
+
 }
 
 
-void User::getChoice(int boxes[]) {
-  std::cout << "0" << std::endl;
-}
-
-
-std::string User::getName() {
-  return "";
-}
-
-
-std::string User::getSymbol() {
-  return "";
+int User::getChoice(int boxes[]) {
+  return 0;
 }
 
 
 
-std::string User::toString() {
-  return "";
+AI::AI() {
+
+}
+
+
+AI::AI(char symbol) {
+
+}
+
+
+int AI::getChoice(int boxes[]) {
+  return 0;
 }
 
 
