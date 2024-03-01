@@ -30,7 +30,7 @@ std::string Player::getName() {
 
 
 char Player::getSymbol() {
-  return '';
+  return 'O';
 }
 
 
@@ -39,7 +39,7 @@ int Player::getScore() {
 }
 
 
-Player::setScore(int s) {
+void Player::setScore(int s) {
 
 }
 
