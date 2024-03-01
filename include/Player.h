@@ -1,8 +1,8 @@
-/*
-* @author James Huston | jamzhuston@gmail.com
-* @date 03/02/2024
-* @brief class to manage user inputs and data
-*/
+/**
+ * @author James Huston | jamzhuston@gmail.com
+ * @date 03/02/2024
+ * @brief class to manage player inputs and data
+ */
 
 
 #ifndef INCLUDED_USER_H
@@ -12,17 +12,17 @@
 #include <string>
 
 
-
+/**
+ * @class Player in "Player.h"
+ * @brief parent class for all types of users
+ */
 class Player {
  public:
   /**
-   *
-   *
+   * @brief default constructor for player
    *
    */
   Player();
-
-
 
   /**
   * @brief constructor for player
@@ -30,8 +30,6 @@ class Player {
   * @param symbol the symbol that the player is using
   */
   player(std::string name, std::string symbol);
-
-
 
   /**
   * @brief gets the choice of which box to select from the user
@@ -44,21 +42,17 @@ class Player {
   */
   int getChoice(int boxes[]);
 
-
   /**
   * @brief gets the name of the player
-  *
   * @return returns the name of the player
   */
   std::string getName();
 
   /**
   * @brief gets the symbol that the player is using
-  *
   * @return returns the symbol of the player
   */
   std::string getSymbol();
-
 
  private:
   std::string name;
@@ -74,13 +68,11 @@ class Player {
   std::string toString();
 };
 
-
-
 /**
-* @class User in "User.h"
-* @brief parent class to manage types of users (people and computer)
+* @class User in "Player.h"
+* @brief child class to manage the human players
 */
-class User {
+class User : public Player{
  public:
   /**
   * @brief default constructor for user
@@ -95,7 +87,6 @@ class User {
   */
   User(std::string name, std::string symbol);
 
-
   /**
   * @brief gets the choice of which box to select from the user
   * @param boxes the list of boxes
@@ -108,26 +99,23 @@ class User {
   int getChoice(int boxes[]);
 };
 
-
-class AI {
+/**
+ * @class AI in "Player.h"
+ * @brief child class to manage the AI players
+ */
+class AI : public Player{
  public:
   /**
-   *
-   *
+   * default constructor for AI
    *
    */
   AI();
 
-
-
   /**
-  * @brief constructor for player
-  * @param name the name of the player 
+  * @brief constructor for the AI
   * @param symbol the symbol that the player is using
   */
-  player(std::string name, std::string symbol);
-
-
+  AI(std::string symbol);
 
   /**
   * @brief gets the choice of which box to select from the user
