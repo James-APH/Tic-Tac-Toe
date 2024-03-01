@@ -66,6 +66,6 @@ class Game {
  private:
   int boxes[];
 
-}
+};
 
 # endif // GAME_H_INCLUDED
