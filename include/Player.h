@@ -54,12 +54,7 @@ class Player {
   */
   char getSymbol();
 
- private:
-  std::string name;
-  char symbol;
-  int score;
-
-  /**
+ /**
    * @brief getter for player score
    * @return score the score of the player
    * wins  -->  +1
@@ -76,6 +71,12 @@ class Player {
    * loses --> -1
    */
   void setScore(int s);
+
+
+ private:
+  std::string name;
+  char symbol;
+  int score;
 
   /**
   * @brief gets player details
