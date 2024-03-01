@@ -7,9 +7,11 @@
 #include <iostream>
 #include <string>
 #include "Player.h"
+#include "Game.h"
 
+Game::Game() {
 
-Game::Game();
+}
 
 
 void Game::play(User player1, User player2) {
@@ -28,7 +30,7 @@ void Game::printScreen() {
 
 
 std::string Game::checkWinner() {
-  return ""
+  return "";
 }
 
 
