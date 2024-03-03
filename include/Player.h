@@ -6,7 +6,7 @@
 
 
 #ifndef INCLUDED_PLAYER_H
-#define INCLUDED_PLAYER_H 
+#define INCLUDED_PLAYER_H
 
 #include <iostream>
 #include <string>
@@ -40,7 +40,7 @@ class Player {
   * @return int the box that the user has chosen
   * 
   */
-  int getChoice(int boxes[]);
+  void getChoice(char boxes[]);
 
   /**
   * @brief gets the name of the player
@@ -116,7 +116,7 @@ class User : public Player{
   * @return int the box that the user has chosen
   * 
   */
-  int getChoice(int boxes[]);
+  void getChoice(char boxes[]);
 };
 
 /**
@@ -131,11 +131,6 @@ class AI : public Player{
    */
   AI();
 
-  /**
-  * @brief constructor for the AI
-  * @param symbol the symbol that the player is using
-  */
-  AI(char symbol);
 
   /**
   * @brief gets the choice of which box to select from the user
@@ -145,7 +140,7 @@ class AI : public Player{
   *  will be asked to select another box.
   * @return int the box that the user has chosen
   */
-  int getChoice(int boxes[]);
+  void getChoice(char boxes[]);
 };
 
 #endif // INCLUDED_PLAYER_H

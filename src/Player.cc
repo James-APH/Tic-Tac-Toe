@@ -9,19 +9,10 @@
 #include <string>
 #include "Player.h"
 
-Player::Player() {
-
-}
+Player::Player() {}
 
 
-Player::Player(std::string name, char symbol) {
-
-}
-
-
-int Player::getChoice(int boxes[]) {
-  return 0;
-}
+Player::Player(std::string name, char symbol) {}
 
 
 std::string Player::getName() {
@@ -39,9 +30,7 @@ int Player::getScore() {
 }
 
 
-void Player::setScore(int s) {
-
-}
+void Player::setScore(int s) {}
 
 
 std::string Player::toString() {
@@ -52,34 +41,19 @@ std::string Player::toString() {
 
 
 
-User::User() {
-
-}
+User::User() {}
 
 
-User::User(std::string name, char symbol) {
-
-}
+User::User(std::string name, char symbol) {}
 
 
-int User::getChoice(int boxes[]) {
-  return 0;
-}
+void User::getChoice(char boxes[]) {}
 
 
 
-AI::AI() {
-
-}
+AI::AI() {}
 
 
-AI::AI(char symbol) {
-
-}
-
-
-int AI::getChoice(int boxes[]) {
-  return 0;
-}
+void AI::getChoice(char boxes[]) {}
 
 
