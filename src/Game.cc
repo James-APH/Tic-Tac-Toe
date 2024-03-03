@@ -3,30 +3,22 @@
  * @date 29/02/2024
  * @brief definitions for Player.h
  */
- 
+
 #include <iostream>
 #include <string>
 #include "Player.h"
 #include "Game.h"
 
-Game::Game() {
-
-}
+Game::Game() {}
 
 
-void Game::play(User player1, User player2) {
-
-}
+void Game::play(User player1, User player2) {}
 
 
-void Game::play(User player1, AI ai) {
-
-}
+void Game::play(User player1, AI ai) {}
 
 
-void Game::printScreen() {
-
-}
+void Game::printScreen() {}
 
 
 std::string Game::checkWinner() {
@@ -34,6 +26,4 @@ std::string Game::checkWinner() {
 }
 
 
-void Game::concludeGame() {
-
-}
+void Game::concludeGame() {}
