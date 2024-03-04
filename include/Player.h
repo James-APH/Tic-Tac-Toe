@@ -19,17 +19,11 @@
 class Player {
  public:
   /**
-   * @brief default constructor for player
-   *
-   */
-  Player();
-
-  /**
   * @brief constructor for player
   * @param name the name of the player 
   * @param symbol the symbol that the player is using
   */
-  Player(std::string name, char symbol);
+  explicit  Player(std::string name = "Unknown", char symbol = "-");
 
   /**
   * @brief gets the choice of which box to select from the user
@@ -73,19 +67,20 @@ class Player {
   void setScore(int s);
 
 
- private:
-  std::string name;
-  char symbol;
-  int score;
-
-  /**
+ /**
   * @brief gets player details
   * @detail formats user information like this:
   *         name:    player_name
   *         symbol   player_symbol
   * 
   */
-  std::string toString();
+  void display();
+
+
+ private:
+  std::string name;
+  char symbol;
+  int score;
 };
 
 /**
@@ -94,12 +89,6 @@ class Player {
 */
 class User : public Player{
  public:
-  /**
-  * @brief default constructor for user
-  * 
-  */
-  User();
-
   /**
   * @brief constructor for user
   * @param name the name of the user
