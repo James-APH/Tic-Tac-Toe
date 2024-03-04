@@ -70,9 +70,9 @@ class Player {
  /**
   * @brief gets player details
   * @detail formats user information like this:
-  *         name:    player_name
-  *         symbol   player_symbol
-  * 
+  *         name:     player_name
+  *         symbol:   player_symbol
+  *         score:    player_score
   */
   void display();
 
