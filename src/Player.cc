@@ -9,46 +9,51 @@
 #include <string>
 #include "Player.h"
 
-Player::Player() {}
 
-
-Player::Player(std::string name, char symbol) {}
+Player::Player(std::string name, char symbol) : name(name), symbol(symbol) {
+  score = 0;
+}
 
 
 std::string Player::getName() {
-  return "";
+  return name;
 }
 
 
 char Player::getSymbol() {
-  return 'O';
+  return symbol;
 }
 
 
 int Player::getScore() {
-  return 0;
+  return score;
 }
 
 
-void Player::setScore(int s) {}
+void Player::setScore(int s) {
+  score = (score + s >= 0 ? score + s : 0);
+}
 
-
-std::string Player::toString() {
-  return "";
+void display() {
+  std::cout << "Player: " << name << '\n'
+            << "Symbol: " << symbol << '\n'
+            << "Score: " << score << std::endl;
 }
 
 
+User::User(std::string name, char symbol) : Player(name, symbol) {}
 
 
-
-User::User() {}
-
-
-User::User(std::string name, char symbol) {}
-
-
-void User::getChoice(char boxes[]) {}
-
+void User::getChoice(char boxes[]) {
+  int fill;
+  do {
+  std::cout << "Enter a box number to fill: ";
+  std::cin >> fill;
+  } while (fill < MINIMUM_BOX_NUM
+       || fill > MAXIMUM_BOX_NUMBER
+       || boxes[fill] != DEFAULT_SYMBOL);
+  boxes[fill] == symbol;
+}
 
 
 AI::AI() {}
