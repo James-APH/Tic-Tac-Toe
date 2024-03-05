@@ -23,7 +23,7 @@ class Player {
   * @param name the name of the player 
   * @param symbol the symbol that the player is using
   */
-  explicit  Player(std::string name = "Unknown", char symbol = "-");
+  explicit  Player(std::string name = "Unknown", char symbol = DEFAULT_SYMBOL);
 
   /**
   * @brief gets the choice of which box to select from the user
@@ -81,6 +81,9 @@ class Player {
   std::string name;
   char symbol;
   int score;
+  static const char DEFAULT_SYMBOL = '-';
+  static const int MINIMUM_BOX_NUMBER = 1;
+  static const int MAXIMUM_BOX_NUMBER = 9;
 };
 
 /**
