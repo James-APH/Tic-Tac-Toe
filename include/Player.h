@@ -8,7 +8,6 @@
 #ifndef INCLUDED_PLAYER_H
 #define INCLUDED_PLAYER_H
 
-#include <iostream>
 #include <string>
 
 
@@ -77,10 +76,10 @@ class Player {
   void display();
 
 
- private:
-  std::string name;
-  char symbol;
-  int score;
+ protected:
+  std::string name = "Unknown";
+  char symbol = '-';
+  int score = 0;
   static const char DEFAULT_SYMBOL = '-';
   static const int MINIMUM_BOX_NUMBER = 1;
   static const int MAXIMUM_BOX_NUMBER = 9;
@@ -97,7 +96,7 @@ class User : public Player{
   * @param name the name of the user
   * @param symbol the symbol that the user is using
   */
-  User(std::string name, char symbol);
+  explicit User(std::string name = "Unknown", char symbol = '-');
 
   /**
   * @brief gets the choice of which box to select from the user
@@ -135,4 +134,4 @@ class AI : public Player{
   void getChoice(char boxes[]);
 };
 
-#endif // INCLUDED_PLAYER_H
+#endif  // INCLUDED_PLAYER_H
