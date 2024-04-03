@@ -7,7 +7,7 @@
 
 #include <iostream>
 #include <string>
-#include "Player.h"
+#include "../include/Player.h"
 
 
 Player::Player(std::string name, char symbol) : name(name), symbol(symbol) {
@@ -34,7 +34,7 @@ void Player::setScore(int s) {
   score = (score + s >= 0 ? score + s : 0);
 }
 
-void display() {
+void Player::display() {
   std::cout << "Player: " << name << '\n'
             << "Symbol: " << symbol << '\n'
             << "Score: " << score << std::endl;
@@ -47,18 +47,23 @@ User::User(std::string name, char symbol) : Player(name, symbol) {}
 void User::getChoice(char boxes[]) {
   int fill;
   do {
-  std::cout << "Enter a box number to fill: ";
-  std::cin >> fill;
-  } while (fill < MINIMUM_BOX_NUM
-       || fill > MAXIMUM_BOX_NUMBER
-       || boxes[fill] != DEFAULT_SYMBOL);
-  boxes[fill] == symbol;
+    std::cout << "Enter a box number to fill"
+                 ", that is not already taken:";
+    std::cin >> fill;
+  } while (fill < MINIMUM_BOX_NUMBER
+        || fill > MAXIMUM_BOX_NUMBER
+        || boxes[fill] != DEFAULT_SYMBOL);
+  boxes[fill] = symbol;
 }
 
 
-AI::AI() {}
+AI::AI() : Player("AI", '#') {}
 
 
-void AI::getChoice(char boxes[]) {}
+void AI::getChoice(char boxes[]) {
+  // write minmax algorithm
+
+
+}
 
 
