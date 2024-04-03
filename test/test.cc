@@ -52,7 +52,7 @@ TEST_CASE("AI Class", "[AI]") {
   SECTION("default ai constructor") {
     Player* ai1 = new AI();
     REQUIRE(ai1->getName() == "AI");
-    REQUIRE(ai1->getSymbol() == 'M');
+    REQUIRE(ai1->getSymbol() == '#');
     REQUIRE(ai1->getScore() == 0);
     delete ai1;
   }
